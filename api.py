@@ -29,7 +29,7 @@ def predict():
     except Exception as e:
         return jsonify({'error': str(e)})
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
 
 # curl -X POST -H "Content-Type: application/json" -d '{
 #   "is_near_metro": 1,
@@ -41,3 +41,14 @@ if __name__ == '__main__':
 #   "documents_encoded": 0,
 #   "is_repair_encoded": 1
 # }' http://localhost:5000/predict
+
+# Flask==3.0.0
+# itemadapter==0.3.0
+# joblib==1.3.2
+# numpy==1.25.2
+# pandas==2.1.1
+# Requests==2.31.0
+# scikit_learn==1.3.1
+# Scrapy==2.8.0
+# streamlit==1.27.2
+# xgboost==1.7.5
