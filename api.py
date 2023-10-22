@@ -3,7 +3,7 @@ import pandas as pd
 from flask import Flask, request, jsonify
 import numpy as np
 import warnings
-import os
+import os  # Import the 'os' module to access environment variables
 
 warnings.filterwarnings("ignore", category=FutureWarning)
 app = Flask(__name__)
@@ -32,7 +32,7 @@ def predict():
         response = {'predicted_price': float(predicted_price[0])}
         return jsonify(response)
     except Exception as e:
-        return jsonify({'error': str(e})
+        return jsonify({'error': str(e)})  # Fixed the missing closing parenthesis
 
 if __name__ == '__main__':
     # Use the PORT environment variable for Heroku, or 5000 if running locally
