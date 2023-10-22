@@ -1,8 +1,8 @@
 import streamlit as st
 import requests
 
-# Define the Flask API URL
-API_URL = "http://localhost:5000/predict"
+# Define the Flask API URL (removed the trailing slash)
+API_URL = "https://home-price-predicition-209f2b8f62a1.herokuapp.com"
 # Streamlit app title
 st.title("Real Estate Price Prediction App")
 
@@ -32,7 +32,8 @@ if st.sidebar.button("Predict"):
         "is_repair_encoded": is_repair_encoded,
     }
     try:
-        response = requests.post(API_URL, json=data)
+        headers = {"Content-Type": "application/json"}  # Set content type
+        response = requests.post(API_URL + "/predict", json=data, headers=headers)
         if response.status_code == 200:
             result = response.json()
             st.sidebar.success(f"Predicted Price: {result['predicted_price']:.2f}")
