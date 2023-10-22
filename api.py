@@ -3,16 +3,21 @@ import pandas as pd
 from flask import Flask, request, jsonify
 import numpy as np
 import warnings
+import os
+
 warnings.filterwarnings("ignore", category=FutureWarning)
 app = Flask(__name__)
 model = joblib.load('xgb.pkl')
+
 def convert_float32_to_float(x):
     if isinstance(x, np.float32):
         return float(x)
     return x
+
 @app.route('/')
 def home():
     return "Welcome to the Price Prediction API!"
+
 @app.route('/predict', methods=['POST'])
 def predict():
     try:
@@ -27,19 +32,9 @@ def predict():
         response = {'predicted_price': float(predicted_price[0])}
         return jsonify(response)
     except Exception as e:
-        return jsonify({'error': str(e)})
+        return jsonify({'error': str(e})
+
 if __name__ == '__main__':
-    app.run()
-
-# curl -X POST -H "Content-Type: application/json" -d '{
-#   "is_near_metro": 1,
-#   "seller_type_encoded": 0,
-#   "flat": 2,
-#   "total_flat": 5,
-#   "area_converted": 100,
-#   "category_encoded": 1,
-#   "documents_encoded": 0,
-#   "is_repair_encoded": 1
-# }' http://localhost:5000/predict
-
-
+    # Use the PORT environment variable for Heroku, or 5000 if running locally
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)
