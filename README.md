@@ -10,9 +10,8 @@
 7.  Type 'git add .'
 8.  Type ' git commit -am "version 1"'
 9.  Type 'git push heroku master'
-10. Now you need to allocate a dyno to do the work. Type 'web: python api.py'
+10. Now you need to allocate a dyno to do the work. Type 'heroku ps:scale web=1'
 11. If you want to check the logs to make sure its working type 'heroku logs --tail'
 12. Now your code will continue to run until you stop the dyno. To stop it scale it down using the command 'heroku ps:scale worker=0'
-
 ---------------
----
+---------------
