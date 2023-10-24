@@ -8,7 +8,7 @@ Home price prediction web application: from user input returns predicted price f
 git clone https://github.com/Ismat-Samadov/home-price-predicitiongit
 cd your-project
 pip install -r requirements.txt
-```
+```bash
 
 ## Usage
 
