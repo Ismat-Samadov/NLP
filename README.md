@@ -1,8 +1,6 @@
 
 # home-price-predicition
 ```
-# Project Name
-
 ## Overview
 Home price prediction web application: from user input returns predicted price from API
 ## Installation
