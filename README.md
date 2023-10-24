@@ -1,5 +1,30 @@
-# home-price-predicition
 
+# home-price-predicition
+```
+# Project Name
+
+## Overview
+Home price prediction web application: from user input returns predicted price from API
+## Installation
+```bash
+git clone https://github.com/Ismat-Samadov/home-price-predicitiongit
+cd your-project
+pip install -r requirements.txt
+```
+
+## Usage
+
+Explain how to use your project and provide code examples if necessary.
+
+```python
+streamlit run app.py
+```
+
+## Acknowledgments
+
+Give credit to any resources or individuals that helped or inspired your project.
+
+```
 ## Deployment to Heroku Instructions (Heroku Git)
 1.  Sign up for a free heroku account if you havent already done so
 2.  Create app ie. myapp #name of app
