@@ -1,40 +1,45 @@
+```markdown
+# Home Price Prediction
 
-# home-price-predicition
-```
 ## Overview
-Home price prediction web application: from user input returns predicted price from API
+
+This is a web application for home price prediction. Given user input, it returns the predicted price using an API.
+
 ## Installation
+
+To set up the project, you can follow these installation steps:
+
 ```bash
-git clone https://github.com/Ismat-Samadov/home-price-predicitiongit
-cd your-project
+git clone https://github.com/Ismat-Samadov/home-price-prediction.git
+cd home-price-prediction
 pip install -r requirements.txt
-```bash
+```
 
 ## Usage
 
-Explain how to use your project and provide code examples if necessary.
+To run the project, use the following command:
 
-```python
+```bash
 streamlit run app.py
 ```
 
 ## Acknowledgments
 
-Give credit to any resources or individuals that helped or inspired your project.
-
-```
 ## Deployment to Heroku Instructions (Heroku Git)
-1.  Sign up for a free heroku account if you havent already done so
-2.  Create app ie. myapp #name of app
-3.  Type heroku login --> This will take you to a web based login page
-4.  cd to your directory on your local drive
-5.  Type 'git init'
-6.  Type 'heroku git:remote -a home-price-predicition'
-7.  Type 'git add .'
-8.  Type ' git commit -am "version 1"'
-9.  Type 'git push heroku master'
-10. Now you need to allocate a dyno to do the work. Type 'heroku ps:scale web=1'
-11. If you want to check the logs to make sure its working type 'heroku logs --tail'
-12. Now your code will continue to run until you stop the dyno. To stop it scale it down using the command 'heroku ps:scale worker=0'
----------------
----------------
+
+1. Sign up for a free Heroku account if you haven't already done so.
+2. Create an app, e.g., 'myapp' (the name of the app).
+3. Open your terminal and type `heroku login`. This will take you to a web-based login page.
+4. Navigate to your project directory on your local drive.
+5. Type `git init` to initialize a Git repository.
+6. Type `heroku git:remote -a home-price-prediction`.
+7. Add your project files with `git add .`.
+8. Commit your changes with `git commit -am "Version 1"`.
+9. Deploy your app to Heroku with `git push heroku master`.
+10. Allocate a dyno to run your app with `heroku ps:scale web=1`.
+11. To check the logs and make sure it's working, use `heroku logs --tail`.
+12. You can stop the dyno by scaling it down with `heroku ps:scale worker=0`.
+
+Note: These instructions are specific to deploying your project on Heroku using Heroku Git. Make sure you have the Heroku CLI installed and configured for a successful deployment.
+```
+
