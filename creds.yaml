@@ -1,0 +1,18 @@
+credentials:
+  usernames:
+    ismats:
+      email: ismetsemedov@gmail.com
+      name: Ismat Samadov
+      password: '$2b$12$f/ZCHMaqT9wKw04RK50rtu7/sWbrp.yDPWIgZEMzLhJ5TV97P1joC'
+    jdoe:
+      email: jhondoe@email.com
+      name: John Doe
+      password: '$2b$12$CImfru2yDn3HkBJGFtJ8Vu00jy9YMaICFZVKaTtoiCEm4ZipmdTxS' 
+cookie:
+  expiry_days: 0
+  key: random_signature_key 
+  name: random_cookie_name
+preauthorized:
+  emails:
+  - ismetsemedli@mail.ru
+
